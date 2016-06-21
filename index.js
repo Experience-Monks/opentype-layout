@@ -6,6 +6,7 @@ var assign = require('object-assign');
 var DEFAULT_LINE_HEIGHT = 1.175;
 
 module.exports = function (font, text, opt) {
+  opt = opt || {};
   var align = defined(opt.align, 'left');
   var letterSpacing = defined(opt.letterSpacing, 0);
   var width = defined(opt.width, Infinity);
