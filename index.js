@@ -6,7 +6,9 @@ var assign = require('object-assign');
 var DEFAULT_LINE_HEIGHT = 1.175;
 
 module.exports = function (font, text, opt) {
+  if (!font) throw new TypeError('Must specify a font from Opentype.js');
   opt = opt || {};
+  text = text || '';
   var align = defined(opt.align, 'left');
   var letterSpacing = defined(opt.letterSpacing, 0);
   var width = defined(opt.width, Infinity);
