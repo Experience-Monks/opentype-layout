@@ -32,7 +32,7 @@
   "scripts": {
     "test": "semistandard && node test.js",
     "start": "budo demo/canvas.js:bundle.js --live -- -t babelify",
-    "build": "browserify demo/canvas.js | uglifyjs -m -c warnings=false > bundle.js"
+    "build": "browserify demo/canvas.js -t babelify | uglifyjs -m -c warnings=false > bundle.js"
   },
   "keywords": [
     "opentype",
