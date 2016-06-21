@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>opentype-layout</title>
+  <style>
+  @font-face {
+    font-family: 'DejaVuSans';
+    src: url('demo/fonts/DejaVuSans.ttf');
+  }
+  body {
+    margin: 0;
+    font-family: 'DejaVuSans', sans-serif;
+    font-size: 14px;
+  }
+  canvas {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  #text {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: 72px;
+    text-align: left;
+    letter-spacing: 5px;
+    width: 460px;
+    line-height: 1em;
+    display: inline-block;
+    background: hsl(100, 50%, 70%);
+  }
+  #info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  </style>
+</head>
+<body>
+  <div id="text">The quick brown fox jumped over the lazy dog.</div>
+  <canvas id="canvas"></canvas>
+  <div id="info">Press C to toggle canvas, D to toggle DOM/CSS.</div>
+  <script src="bundle.js"></script>
+</body>
+</html>
